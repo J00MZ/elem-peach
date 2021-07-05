@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rickandmorty-ingress
+spec:
+  defaultBackend:
+    service:
+      name: rickandmorty
+      port:
+        number: 5000

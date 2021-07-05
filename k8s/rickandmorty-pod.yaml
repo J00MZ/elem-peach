@@ -2,12 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    kiwi-snyk-service-a.service: service-a
-  name: service-a
+    rickandmorty.service: rickandmorty
+  name: rickandmorty
 spec:
   containers:
-    - image: kiwi-snyk-service-a:latest
-      name: service-a
+    - image: rickandmorty:latest
+      name: rickandmorty
       ports:
         - containerPort: 5000
       livenessProbe:

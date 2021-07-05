@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    kiwi-snyk-service-a.service: service-a
-  name: service-a
+    rickandmorty.service: rickandmorty
+  name: rickandmorty
 spec:
   type: NodePort
   ports:
@@ -11,6 +11,6 @@ spec:
       port: 5000
       targetPort: 5000
   selector:
-    kiwi-snyk-service-a.service: service-a
+    rickandmorty.service: rickandmorty
 status:
   loadBalancer: {}

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    kiwi-snyk-service-a.service: service-a
+  name: service-a
+spec:
+  type: NodePort
+  ports:
+    - name: "5000"
+      port: 5000
+      targetPort: 5000
+  selector:
+    kiwi-snyk-service-a.service: service-a
+status:
+  loadBalancer: {}

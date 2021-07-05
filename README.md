@@ -33,10 +33,10 @@ Access the link **`http://localhost:5000/healthcheck`** in a browser, or use CUR
     curl http://localhost:5000/healthcheck
 ```
 
-# Deploy App to Kubernetes
+## Deploy App to Kubernetes
 ```
 cd <REPOSITORY_ROOT>
 kubectl apply -f yamls
 kubectl port-forward service/rickandmorty 5000
 ```
-Then you can access the application on localhost:5000
+Then you can access the application on `localhost:5000`

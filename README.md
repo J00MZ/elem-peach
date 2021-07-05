@@ -15,7 +15,7 @@ docker build -t rickandmorty .
 docker run -p 5000:5000 rickandmorty
 ```
 ## App Functionality
-1. To get all the live Humans from Earth
+1. To get all the live Humans from Earth  
 Access the link **`http://localhost:5000/find-live-humans`** in a browser, or use CURL command
 ```
     curl http://localhost:5000/find-live-humans

@@ -1,29 +1,38 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    rickandmorty.service: rickandmorty
+    app: rickandmorty
   name: rickandmorty
 spec:
-  containers:
-    - image: rickandmorty:latest
-      name: rickandmorty
-      ports:
-        - containerPort: 5000
-      livenessProbe:
-        httpGet:
-          path: /healthcheck
-          port: 5000
-          httpHeaders:
-          - name: Custom-Header
-            value: Health Probe
-        initialDelaySeconds: 3
-        periodSeconds: 3
-      resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-  restartPolicy: OnFailure
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rickandmorty
+  template:
+    metadata:
+      labels:
+        app: rickandmorty
+    spec:
+      containers:
+      - name: rickandmorty
+        image: j00mz/rickandmorty:main
+        ports:
+          - containerPort: 5000
+        livenessProbe:
+          httpGet:
+            path: /healthcheck
+            port: 5000
+            httpHeaders:
+            - name: Custom-Header
+              value: Health Probe
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+      restartPolicy: Always

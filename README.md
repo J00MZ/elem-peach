@@ -45,5 +45,5 @@ Then you can access the application on `localhost:5000`
 ## CI
 Current CI configured is that when any changes are done to any files in the service folder `rickandmorty` there is a GitHub Actions workflow that will:  
 1. Build the image  
-2. Push the updated image to Docker Hub repo
+2. Push the updated image to Docker Hub [repo](https://hub.docker.com/repository/docker/j00mz/rickandmorty)
 

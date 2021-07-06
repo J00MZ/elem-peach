@@ -13,4 +13,6 @@ spec:
   selector:
     rickandmorty.service: rickandmorty
 status:
-  loadBalancer: {}
+  loadBalancer:
+    ingress:
+      - hostname: localhost

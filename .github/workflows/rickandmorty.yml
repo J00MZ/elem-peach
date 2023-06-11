@@ -28,7 +28,7 @@ jobs:
           images: j00mz/rickandmorty
       
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           context: rickandmorty/
           push: true

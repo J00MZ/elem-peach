@@ -1,4 +1,4 @@
-Flask==1.1.2
+Flask==2.3.2
 requests==2.25.1
 coloredlogs==15.0.1
 tablib==3.0.0

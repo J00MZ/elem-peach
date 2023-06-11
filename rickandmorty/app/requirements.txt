@@ -1,4 +1,4 @@
 Flask==2.3.2
 requests==2.31.0
 coloredlogs==15.0.1
-tablib==3.4.0
+tablib==3.5.0
